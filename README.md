@@ -1,75 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notre Dame Football</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0C2340;
-      color: white;
-      text-align: center;
-    }
-    header {
-      background: #AE9142;
-      padding: 20px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    a.btn {
-      display: inline-block;
-      padding: 12px 20px;
-      margin-top: 20px;
-      background: #AE9142;
-      color: #0C2340;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-    a.btn:hover {
-      background: #c4a856;
-    }
-    footer {
-      background: #111;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Notre Dame Football</h1>
-  </header>
+# ACL Injury Guide Website
 
-  <main>
-    <h2>Welcome Fighting Irish Fans!</h2>
-    <p>
-      Notre Dame Fighting Irish football is one of the most storied programs in college sports.
-      With legendary players, historic championships, and unforgettable moments, the team embodies
-      tradition and excellence on and off the field.
-    </p>
-    <a class="btn" href="https://fightingirish.com/sports/football/" target="_blank">
-      Visit Official Site
-    </a>
-  </main>
+A comprehensive educational website about Anterior Cruciate Ligament (ACL) injuries, providing information on symptoms, treatment options, prevention strategies, and recovery timelines.
 
-  <footer>
-    © <span id="year"></span> Notre Dame Football Fan Page
-  </footer>
+## Features
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+- **Modern, Responsive Design**: Clean and professional layout that works on all devices
+- **Comprehensive Information**: Detailed sections covering all aspects of ACL injuries
+- **Interactive Elements**: Smooth scrolling navigation and hover effects
+- **Educational Resources**: Links to trusted medical sources and organizations
+- **Recovery Timeline**: Step-by-step guide to ACL injury recovery phases
+
+## Sections
+
+1. **Overview**: What is an ACL injury and who's at risk
+2. **Symptoms**: Common signs and when to seek medical attention
+3. **Treatment**: Both surgical and non-surgical treatment options
+4. **Prevention**: Strategies to reduce ACL injury risk
+5. **Recovery**: Detailed timeline and tips for rehabilitation
+6. **Resources**: Links to medical organizations and additional information
+
+## Technology
+
+- Pure HTML5, CSS3, and JavaScript
+- Responsive design with CSS Grid and Flexbox
+- Modern CSS features including gradients, shadows, and animations
+- No external dependencies
+
+## Usage
+
+Simply open `index.html` in any modern web browser to view the website.
+
+## Disclaimer
+
+This website is for educational purposes only and should not replace professional medical advice. Always consult with healthcare professionals for medical concerns.

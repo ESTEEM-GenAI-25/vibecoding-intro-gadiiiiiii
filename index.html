@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACL Injuries - Complete Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #3498db;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    }
+
+    .btn:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    }
+
+    .main-content {
+      background: white;
+      margin: 2rem 0;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .section {
+      padding: 3rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section h2 {
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #3498db;
+    }
+
+    .section h3 {
+      color: #34495e;
+      margin: 2rem 0 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h4 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .symptoms-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptoms-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .symptoms-list li::before {
+      content: '⚠️';
+      position: absolute;
+      left: 0;
+    }
+
+    .treatment-steps {
+      counter-reset: step-counter;
+    }
+
+    .treatment-steps li {
+      counter-increment: step-counter;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50px;
+    }
+
+    .treatment-steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      background: #3498db;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .prevention-tips {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .tip {
+      background: linear-gradient(135deg, #74b9ff, #0984e3);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .tip h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .recovery-timeline {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .timeline-phase {
+      background: #e74c3c;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-right: 1rem;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .resources {
+      background: #2c3e50;
+      color: white;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .resources h2 {
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .resources h2::after {
+      background: #3498db;
+    }
+
+    .resource-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .resource-link {
+      background: #3498db;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .resource-link:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #34495e;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section {
+        padding: 2rem 1rem;
+      }
+      
+      .timeline-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .timeline-phase {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">ACL Injury Guide</div>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#symptoms">Symptoms</a></li>
+        <li><a href="#treatment">Treatment</a></li>
+        <li><a href="#prevention">Prevention</a></li>
+        <li><a href="#recovery">Recovery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Understanding ACL Injuries</h1>
+      <p>Your comprehensive guide to Anterior Cruciate Ligament injuries, from prevention to full recovery</p>
+      <a href="#overview" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <div class="main-content">
+    <section id="overview" class="section">
+      <h2>What is an ACL Injury?</h2>
+      <p>The Anterior Cruciate Ligament (ACL) is one of the four major ligaments in the knee that connects the femur (thighbone) to the tibia (shinbone). It provides stability to the knee joint and prevents the tibia from sliding forward in relation to the femur.</p>
+      
+      <div class="grid">
+        <div class="card">
+          <h4>ACL Tears</h4>
+          <p>ACL tears are among the most common knee injuries, especially in athletes. They can be partial or complete tears and often occur during sports that involve sudden stops, changes in direction, or landing from jumps.</p>
+        </div>
+        <div class="card">
+          <h4>Who's at Risk?</h4>
+          <p>Athletes in sports like soccer, basketball, football, and skiing are at higher risk. Women are 2-8 times more likely to experience ACL injuries than men due to anatomical and hormonal differences.</p>
+        </div>
+        <div class="card">
+          <h4>Impact on Daily Life</h4>
+          <p>ACL injuries can significantly impact mobility and quality of life, making it difficult to walk, climb stairs, or participate in physical activities without proper treatment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="symptoms" class="section">
+      <h2>Signs and Symptoms</h2>
+      <p>Recognizing ACL injury symptoms early is crucial for proper treatment and recovery. Here are the most common signs:</p>
+      
+      <ul class="symptoms-list">
+        <li><strong>Immediate pain:</strong> Sharp, intense pain at the moment of injury</li>
+        <li><strong>Swelling:</strong> Rapid swelling within hours of the injury</li>
+        <li><strong>Instability:</strong> Feeling that the knee is "giving way" or unstable</li>
+        <li><strong>Loss of range of motion:</strong> Difficulty straightening or bending the knee</li>
+        <li><strong>Popping sound:</strong> Many people hear or feel a "pop" at the time of injury</li>
+        <li><strong>Bruising:</strong> Discoloration around the knee joint</li>
+        <li><strong>Difficulty walking:</strong> Pain and instability when putting weight on the leg</li>
+      </ul>
+
+      <div class="card">
+        <h4>When to Seek Medical Attention</h4>
+        <p>If you experience any of these symptoms, especially after a knee injury, it's important to see a healthcare provider immediately. Early diagnosis and treatment can prevent further damage and improve recovery outcomes.</p>
+      </div>
+    </section>
+
+    <section id="treatment" class="section">
+      <h2>Treatment Options</h2>
+      <p>ACL injury treatment depends on several factors including the severity of the tear, your activity level, age, and overall health. Here are the main treatment approaches:</p>
+
+      <h3>Non-Surgical Treatment</h3>
+      <p>For partial tears or in individuals with low activity levels, non-surgical treatment may be appropriate:</p>
+      <ul class="treatment-steps">
+        <li><strong>RICE Protocol:</strong> Rest, Ice, Compression, and Elevation to reduce swelling and pain</li>
+        <li><strong>Physical Therapy:</strong> Strengthening exercises to improve knee stability and function</li>
+        <li><strong>Bracing:</strong> Wearing a knee brace during activities to provide support</li>
+        <li><strong>Activity Modification:</strong> Avoiding high-impact activities that could cause further injury</li>
+      </ul>
+
+      <h3>Surgical Treatment</h3>
+      <p>For complete tears or in active individuals, ACL reconstruction surgery is often recommended:</p>
+      <ul class="treatment-steps">
+        <li><strong>Graft Selection:</strong> Using tissue from your own body (autograft) or a donor (allograft)</li>
+        <li><strong>Arthroscopic Surgery:</strong> Minimally invasive procedure using small incisions</li>
+        <li><strong>Rehabilitation:</strong> Comprehensive physical therapy program lasting 6-12 months</li>
+        <li><strong>Return to Activity:</strong> Gradual progression back to sports and high-impact activities</li>
+      </ul>
+    </section>
+
+    <section id="prevention" class="section">
+      <h2>Prevention Strategies</h2>
+      <p>While ACL injuries can't always be prevented, there are several strategies that can significantly reduce your risk:</p>
+
+      <div class="prevention-tips">
+        <div class="tip">
+          <h4>Proper Warm-up</h4>
+          <p>Always warm up before physical activity with dynamic stretching and light cardio</p>
+        </div>
+        <div class="tip">
+          <h4>Strengthening Exercises</h4>
+          <p>Focus on strengthening your hamstrings, quadriceps, and core muscles</p>
+        </div>
+        <div class="tip">
+          <h4>Neuromuscular Training</h4>
+          <p>Practice balance, agility, and plyometric exercises to improve coordination</p>
+        </div>
+        <div class="tip">
+          <h4>Proper Technique</h4>
+          <p>Learn and practice proper landing and cutting techniques in sports</p>
+        </div>
+        <div class="tip">
+          <h4>Equipment Check</h4>
+          <p>Ensure your shoes and equipment are appropriate for your sport and properly fitted</p>
+        </div>
+        <div class="tip">
+          <h4>Listen to Your Body</h4>
+          <p>Don't ignore pain or fatigue - rest when needed to prevent overuse injuries</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recovery" class="section">
+      <h2>Recovery Timeline</h2>
+      <p>ACL injury recovery is a long process that requires patience, dedication, and proper guidance. Here's what to expect:</p>
+
+      <div class="recovery-timeline">
+        <div class="timeline-item">
+          <div class="timeline-phase">Phase 1: Acute (0-2 weeks)</div>
+          <div>Focus on reducing swelling, managing pain, and regaining basic range of motion</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Phase 2: Early Recovery (2-6 weeks)</div>
+          <div>Begin gentle strengthening exercises and work on walking without crutches</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Phase 3: Strengthening (6-12 weeks)</div>
+          <div>Progressive strengthening program focusing on quadriceps, hamstrings, and core</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Phase 4: Return to Activity (3-6 months)</div>
+          <div>Gradual return to sports-specific activities with proper technique training</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-phase">Phase 5: Full Recovery (6-12 months)</div>
+          <div>Complete return to pre-injury activity level with continued maintenance exercises</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Recovery Tips</h4>
+        <ul>
+          <li>Follow your physical therapist's recommendations closely</li>
+          <li>Don't rush the recovery process - healing takes time</li>
+          <li>Maintain a positive attitude and stay motivated</li>
+          <li>Communicate openly with your healthcare team</li>
+          <li>Focus on proper nutrition to support healing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="resources">
+      <h2>Additional Resources</h2>
+      <p>For more information about ACL injuries, treatment options, and recovery, consult these trusted sources:</p>
+      
+      <div class="resource-links">
+        <a href="https://www.aaos.org" class="resource-link" target="_blank">American Academy of Orthopaedic Surgeons</a>
+        <a href="https://www.apta.org" class="resource-link" target="_blank">American Physical Therapy Association</a>
+        <a href="https://www.mayoclinic.org" class="resource-link" target="_blank">Mayo Clinic</a>
+        <a href="https://www.webmd.com" class="resource-link" target="_blank">WebMD</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> ACL Injury Guide - Educational Resource Only</p>
+      <p><em>This information is for educational purposes only and should not replace professional medical advice.</em></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
